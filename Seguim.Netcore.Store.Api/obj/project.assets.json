@@ -4746,6 +4746,43 @@
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
+      },
+      "Seguim.Netcore.Store.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Seguim.Netcore.Store.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Seguim.Netcore.Store.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Seguim.Netcore.Store.Domain.dll": {}
+        }
+      },
+      "Seguim.Netcore.Store.Infra/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Seguim.Netcore.Store.Domain": "1.0.0",
+          "Seguim.Netcore.Store.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Seguim.Netcore.Store.Infra.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Seguim.Netcore.Store.Infra.dll": {}
+        }
+      },
+      "Seguim.Netcore.Store.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Seguim.Netcore.Store.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Seguim.Netcore.Store.Shared.dll": {}
+        }
       }
     }
   },
@@ -12524,12 +12561,30 @@
         "windowsazure.storage.8.1.4.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
+    },
+    "Seguim.Netcore.Store.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Seguim.Netcore.Store.Domain/Seguim.Netcore.Store.Domain.csproj",
+      "msbuildProject": "../Seguim.Netcore.Store.Domain/Seguim.Netcore.Store.Domain.csproj"
+    },
+    "Seguim.Netcore.Store.Infra/1.0.0": {
+      "type": "project",
+      "path": "../Seguim.Netcore.Store.Infra/Seguim.Netcore.Store.Infra.csproj",
+      "msbuildProject": "../Seguim.Netcore.Store.Infra/Seguim.Netcore.Store.Infra.csproj"
+    },
+    "Seguim.Netcore.Store.Shared/1.0.0": {
+      "type": "project",
+      "path": "../Seguim.Netcore.Store.Shared/Seguim.Netcore.Store.Shared.csproj",
+      "msbuildProject": "../Seguim.Netcore.Store.Shared/Seguim.Netcore.Store.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.AspNetCore.All >= 2.0.0",
-      "Microsoft.NETCore.App >= 2.0.0"
+      "Microsoft.NETCore.App >= 2.0.0",
+      "Seguim.Netcore.Store.Domain >= 1.0.0",
+      "Seguim.Netcore.Store.Infra >= 1.0.0",
+      "Seguim.Netcore.Store.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12559,7 +12614,17 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Domain/Seguim.Netcore.Store.Domain.csproj": {
+              "projectPath": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Domain/Seguim.Netcore.Store.Domain.csproj"
+            },
+            "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Shared/Seguim.Netcore.Store.Shared.csproj": {
+              "projectPath": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Shared/Seguim.Netcore.Store.Shared.csproj"
+            },
+            "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Infra/Seguim.Netcore.Store.Infra.csproj": {
+              "projectPath": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Infra/Seguim.Netcore.Store.Infra.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

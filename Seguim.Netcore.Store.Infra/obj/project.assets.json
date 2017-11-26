@@ -25,6 +25,29 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "Seguim.Netcore.Store.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Seguim.Netcore.Store.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Seguim.Netcore.Store.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Seguim.Netcore.Store.Domain.dll": {}
+        }
+      },
+      "Seguim.Netcore.Store.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Seguim.Netcore.Store.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Seguim.Netcore.Store.Shared.dll": {}
+        }
       }
     }
   },
@@ -169,11 +192,23 @@
         "netstandard.library.2.0.0.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Seguim.Netcore.Store.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Seguim.Netcore.Store.Domain/Seguim.Netcore.Store.Domain.csproj",
+      "msbuildProject": "../Seguim.Netcore.Store.Domain/Seguim.Netcore.Store.Domain.csproj"
+    },
+    "Seguim.Netcore.Store.Shared/1.0.0": {
+      "type": "project",
+      "path": "../Seguim.Netcore.Store.Shared/Seguim.Netcore.Store.Shared.csproj",
+      "msbuildProject": "../Seguim.Netcore.Store.Shared/Seguim.Netcore.Store.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.0"
+      "NETStandard.Library >= 2.0.0",
+      "Seguim.Netcore.Store.Domain >= 1.0.0",
+      "Seguim.Netcore.Store.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -203,7 +238,14 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Shared/Seguim.Netcore.Store.Shared.csproj": {
+              "projectPath": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Shared/Seguim.Netcore.Store.Shared.csproj"
+            },
+            "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Domain/Seguim.Netcore.Store.Domain.csproj": {
+              "projectPath": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Domain/Seguim.Netcore.Store.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
