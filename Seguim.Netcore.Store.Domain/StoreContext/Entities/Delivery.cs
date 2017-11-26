@@ -1,6 +1,6 @@
 using System;
 
-namespace Seguim.Netcore.Store.Domain.StoreContext
+namespace Seguim.Netcore.Store.Domain.StoreContext.Entities
 {
     public class Delivery
     {

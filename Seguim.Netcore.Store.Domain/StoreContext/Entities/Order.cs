@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 
-namespace Seguim.Netcore.Store.Domain.StoreContext {
+namespace Seguim.Netcore.Store.Domain.StoreContext.Entities
+{
 
     public class Order {
         public Customer Customer { get; set; }
@@ -13,7 +14,7 @@ namespace Seguim.Netcore.Store.Domain.StoreContext {
 
         // To Place an Order
         public void Place () {
-            
+
         }
     }
 }
