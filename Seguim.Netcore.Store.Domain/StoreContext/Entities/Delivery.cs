@@ -1,11 +1,17 @@
 using System;
+using Seguim.Netcore.Store.Domain.StoreContext.Enums;
 
 namespace Seguim.Netcore.Store.Domain.StoreContext.Entities
 {
     public class Delivery
     {
-        public DateTime CreateDate { get; set; }
-        public DateTime EstimatedDeliveryDate { get; set; }
-        public string Status { get; set; }
+        public Delivery(DateTime estimatedDeliveryDate)
+        {
+            EstimatedDeliveryDate = estimatedDeliveryDate;
+        }
+
+        public DateTime CreateDate { get; private set; }
+        public DateTime EstimatedDeliveryDate { get; private set; }
+        public EDeliveryStatus Status { get; private set; }
     }
 }
