@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "targets": {
     ".NETStandard,Version=v2.0": {
       "Microsoft.NETCore.Platforms/1.1.0": {
@@ -24,6 +24,29 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Seguim.Netcore.Store.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Seguim.Netcore.Store.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Seguim.Netcore.Store.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Seguim.Netcore.Store.Domain.dll": {}
+        }
+      },
+      "Seguim.Netcore.Store.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Seguim.Netcore.Store.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Seguim.Netcore.Store.Shared.dll": {}
         }
       }
     }
@@ -169,16 +192,27 @@
         "netstandard.library.2.0.0.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Seguim.Netcore.Store.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Seguim.Netcore.Store.Domain/Seguim.Netcore.Store.Domain.csproj",
+      "msbuildProject": "../Seguim.Netcore.Store.Domain/Seguim.Netcore.Store.Domain.csproj"
+    },
+    "Seguim.Netcore.Store.Shared/1.0.0": {
+      "type": "project",
+      "path": "../Seguim.Netcore.Store.Shared/Seguim.Netcore.Store.Shared.csproj",
+      "msbuildProject": "../Seguim.Netcore.Store.Shared/Seguim.Netcore.Store.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.0"
+      "NETStandard.Library >= 2.0.0",
+      "Seguim.Netcore.Store.Domain >= 1.0.0",
+      "Seguim.Netcore.Store.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "/home/fernando/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/home/fernando/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
@@ -186,30 +220,22 @@
       "projectUniqueName": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Infra/Seguim.Netcore.Store.Infra.csproj",
       "projectName": "Seguim.Netcore.Store.Infra",
       "projectPath": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Infra/Seguim.Netcore.Store.Infra.csproj",
-      "packagesPath": "/home/fernando/.nuget/packages/",
       "outputPath": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Infra/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
-      "configFilePaths": [
-        "/home/fernando/.nuget/NuGet/NuGet.Config"
-      ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
-      "sources": {
-        "https://api.nuget.org/v3/index.json": {}
-      },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Shared/Seguim.Netcore.Store.Shared.csproj": {
+              "projectPath": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Shared/Seguim.Netcore.Store.Shared.csproj"
+            },
+            "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Domain/Seguim.Netcore.Store.Domain.csproj": {
+              "projectPath": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Domain/Seguim.Netcore.Store.Domain.csproj"
+            }
+          }
         }
-      },
-      "warningProperties": {
-        "warnAsError": [
-          "NU1605"
-        ]
       }
     },
     "frameworks": {
@@ -218,15 +244,9 @@
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
+            "version": "2.0.0"
           }
-        },
-        "imports": [
-          "net461"
-        ],
-        "assetTargetFallback": true,
-        "warn": true
+        }
       }
     }
   }
