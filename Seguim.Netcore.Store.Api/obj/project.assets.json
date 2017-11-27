@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "Libuv/1.10.0": {
@@ -12588,8 +12588,7 @@
     ]
   },
   "packageFolders": {
-    "/home/fernando/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/home/fernando/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
@@ -12597,21 +12596,11 @@
       "projectUniqueName": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Api/Seguim.Netcore.Store.Api.csproj",
       "projectName": "Seguim.Netcore.Store.Api",
       "projectPath": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Api/Seguim.Netcore.Store.Api.csproj",
-      "packagesPath": "/home/fernando/.nuget/packages/",
       "outputPath": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Api/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
-      "configFilePaths": [
-        "/home/fernando/.nuget/NuGet/NuGet.Config"
-      ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
-      "sources": {
-        "https://api.nuget.org/v3/index.json": {}
-      },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
@@ -12626,11 +12615,6 @@
             }
           }
         }
-      },
-      "warningProperties": {
-        "warnAsError": [
-          "NU1605"
-        ]
       }
     },
     "frameworks": {
@@ -12638,19 +12622,13 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
+            "version": "2.0.0"
           },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
             "version": "2.0.0"
           }
-        },
-        "imports": [
-          "net461"
-        ],
-        "assetTargetFallback": true,
-        "warn": true
+        }
       }
     }
   }
