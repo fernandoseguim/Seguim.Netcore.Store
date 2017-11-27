@@ -1,4 +1,4 @@
-using Seguim.Netcore.Store.Domain.StoreContext.Enuns;
+using Seguim.Netcore.Store.Domain.StoreContext.Enums;
 
 namespace Seguim.Netcore.Store.Domain.StoreContext.Entities
 {

@@ -1,4 +1,4 @@
-namespace Seguim.Netcore.Store.Domain.StoreContext.Enuns
+namespace Seguim.Netcore.Store.Domain.StoreContext.Enums
 {
     public enum EDeliveryStatus
     {
