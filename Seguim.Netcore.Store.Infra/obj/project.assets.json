@@ -1,7 +1,19 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "Flunt/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Flunt.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Flunt.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -11,7 +23,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "NETStandard.Library/2.0.0": {
+      "NETStandard.Library/2.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
@@ -30,6 +42,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Flunt": "1.0.2",
           "Seguim.Netcore.Store.Shared": "1.0.0"
         },
         "compile": {
@@ -52,8 +65,18 @@
     }
   },
   "libraries": {
+    "Flunt/1.0.2": {
+      "sha512": "HtQBErf6cJewdP7LzLJEyehePdPKP4ieYoQP8DpiXB6qs1TeuHVF38Bw8TZzz9t7r2j+SWFRoMsU5oJvzSOeBg==",
+      "type": "package",
+      "path": "flunt/1.0.2",
+      "files": [
+        "flunt.1.0.2.nupkg.sha512",
+        "flunt.nuspec",
+        "lib/netstandard1.3/Flunt.dll"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "sha512": "VlhDDoNjjDZoOE7BVuUFWIcSRsRKoOeJMJT6WcH6TCQM2xSsec9IZbwYJE4wJqyuJ+PDuu11QveARj//SUyj6A==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
@@ -65,12 +88,14 @@
         "runtime.json"
       ]
     },
-    "NETStandard.Library/2.0.0": {
-      "sha512": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
+    "NETStandard.Library/2.0.1": {
+      "sha512": "oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
       "type": "package",
-      "path": "netstandard.library/2.0.0",
+      "path": "netstandard.library/2.0.1",
       "files": [
         "LICENSE.TXT",
+        "NETStandard.Library.2.0.1.nupkg.sha512",
+        "NETStandard.Library.nuspec",
         "THIRD-PARTY-NOTICES.TXT",
         "build/NETStandard.Library.targets",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -188,9 +213,7 @@
         "build/netstandard2.0/ref/mscorlib.dll",
         "build/netstandard2.0/ref/netstandard.dll",
         "build/netstandard2.0/ref/netstandard.xml",
-        "lib/netstandard1.0/_._",
-        "netstandard.library.2.0.0.nupkg.sha512",
-        "netstandard.library.nuspec"
+        "lib/netstandard1.0/_._"
       ]
     },
     "Seguim.Netcore.Store.Domain/1.0.0": {
@@ -206,36 +229,60 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.0",
+      "NETStandard.Library >= 2.0.1",
       "Seguim.Netcore.Store.Domain >= 1.0.0",
       "Seguim.Netcore.Store.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "/home/fernando/.nuget/packages/": {}
+    "C:\\Users\\fernando.seguim\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Infra/Seguim.Netcore.Store.Infra.csproj",
+      "projectUniqueName": "C:\\workspace\\seguim\\Seguim.Netcore.Store\\Seguim.Netcore.Store.Infra\\Seguim.Netcore.Store.Infra.csproj",
       "projectName": "Seguim.Netcore.Store.Infra",
-      "projectPath": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Infra/Seguim.Netcore.Store.Infra.csproj",
-      "outputPath": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Infra/obj/",
+      "projectPath": "C:\\workspace\\seguim\\Seguim.Netcore.Store\\Seguim.Netcore.Store.Infra\\Seguim.Netcore.Store.Infra.csproj",
+      "packagesPath": "C:\\Users\\fernando.seguim\\.nuget\\packages\\",
+      "outputPath": "C:\\workspace\\seguim\\Seguim.Netcore.Store\\Seguim.Netcore.Store.Infra\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\fernando.seguim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+      ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Shared/Seguim.Netcore.Store.Shared.csproj": {
-              "projectPath": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Shared/Seguim.Netcore.Store.Shared.csproj"
+            "C:\\workspace\\seguim\\Seguim.Netcore.Store\\Seguim.Netcore.Store.Domain\\Seguim.Netcore.Store.Domain.csproj": {
+              "projectPath": "C:\\workspace\\seguim\\Seguim.Netcore.Store\\Seguim.Netcore.Store.Domain\\Seguim.Netcore.Store.Domain.csproj"
             },
-            "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Domain/Seguim.Netcore.Store.Domain.csproj": {
-              "projectPath": "/home/fernando/workspace/github.com/balta.io/Seguim.Netcore.Store/Seguim.Netcore.Store.Domain/Seguim.Netcore.Store.Domain.csproj"
+            "C:\\workspace\\seguim\\Seguim.Netcore.Store\\Seguim.Netcore.Store.Shared\\Seguim.Netcore.Store.Shared.csproj": {
+              "projectPath": "C:\\workspace\\seguim\\Seguim.Netcore.Store\\Seguim.Netcore.Store.Shared\\Seguim.Netcore.Store.Shared.csproj"
             }
           }
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {
@@ -244,9 +291,15 @@
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0"
+            "version": "[2.0.1, )",
+            "autoReferenced": true
           }
-        }
+        },
+        "imports": [
+          "net461"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
       }
     }
   }

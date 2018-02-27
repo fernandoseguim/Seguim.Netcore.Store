@@ -1,6 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <PackageReference Include="Flunt" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Seguim.Netcore.Store.Shared\Seguim.Netcore.Store.Shared.csproj" />
   </ItemGroup>
 
