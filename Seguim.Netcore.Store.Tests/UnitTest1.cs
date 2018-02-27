@@ -28,6 +28,7 @@ namespace Seguim.Netcore.Store.Tests
 
 			order.Place();
 
+			//Valida o pedido
 			var valid = order.Valid;
 
 			order.Pay();
