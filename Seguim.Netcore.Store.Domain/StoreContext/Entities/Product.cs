@@ -1,5 +1,8 @@
+using Flunt.Notifications;
+
 namespace Seguim.Netcore.Store.Domain.StoreContext.Entities {
-    public class Product {
+    public class Product : Notifiable
+    {
         public Product (string title, string description, string image, decimal price, decimal quantity) {
             this.Title = title;
             this.Description = description;

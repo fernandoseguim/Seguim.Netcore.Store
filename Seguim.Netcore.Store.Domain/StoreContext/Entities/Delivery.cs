@@ -1,9 +1,10 @@
 using System;
+using Flunt.Notifications;
 using Seguim.Netcore.Store.Domain.StoreContext.Enums;
 
 namespace Seguim.Netcore.Store.Domain.StoreContext.Entities
 {
-    public class Delivery
+    public class Delivery : Notifiable
     {
         public Delivery(DateTime estimatedDeliveryDate)
         {

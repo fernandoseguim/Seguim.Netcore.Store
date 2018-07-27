@@ -2,17 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Flunt.Notifications;
+using Flunt.Validations;
 using Seguim.Netcore.Store.Domain.StoreContext.Enums;
 
 namespace Seguim.Netcore.Store.Domain.StoreContext.Entities {
 
     public class Order : Notifiable
 	{
-
         private readonly IList<OrderItem> _items;
         private readonly IList<Delivery> _deliveries;
 
-        public Order (Customer customer) {
+        public Order (Customer customer) 
+		{
             this.Customer = customer;
             this.CreateDate = DateTime.Now;
             this.Status = EOrderStatus.Created;
@@ -27,13 +28,15 @@ namespace Seguim.Netcore.Store.Domain.StoreContext.Entities {
         public IReadOnlyCollection<OrderItem> Items => _items.ToArray(); 
         public IReadOnlyCollection<Delivery> Deliveries => _deliveries.ToArray();
 
-        public void AddItem(OrderItem orderItem)
+		public void AddItem(Product product, decimal quantity)
         {
-            // Valida o item
-            // Adiciona ao pedido
-            _items.Add(orderItem);
+            if(quantity > product.QuantityOnHand)
+                AddNotification("OrderItem", $"The product {product.Title} there is not {quantity} items into stock");
+            
+            var item = new OrderItem(product, quantity);
+            _items.Add(item);            
         }
-
+                
         public void AddDelivery(Delivery delivery)
         {
             // Valida o item
@@ -46,7 +49,7 @@ namespace Seguim.Netcore.Store.Domain.StoreContext.Entities {
 		{
 			if(_items.Count == 0)
 			{
-				AddNotification("Order", "Este pedido não possui itens");
+				AddNotification("Order", "This order has no items");
 			}
 			this.Number = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 8).ToUpper();
 		}
